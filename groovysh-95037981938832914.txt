@@ -1,0 +1,124 @@
+// OPENED: Sun Mar 24 16:58:26 IST 2019
+// RESULT: /tmp/groovysh-95037981938832914.txt
+def cars = ['audi', 'bmw']
+// RESULT: [audi, bmw]
+cars
+// RESULT: [audi, bmw]
+cars.size()
+// RESULT: 2
+for(car in cars) {
+ println car
+}
+// RESULT: null
+cars.push('porshe')
+// RESULT: true
+cars
+// RESULT: [porshe, audi, bmw]
+cars.pop()
+// RESULT: porshe
+cars
+// RESULT: [audi, bmw]
+cars.add('porshe')
+// RESULT: true
+cars
+// RESULT: [audi, bmw, porshe]
+cars.add(1, 'i20')
+// RESULT: null
+cars
+// RESULT: [audi, i20, bmw, porshe]
+cars.removeAt(1)
+// RESULT: i20
+cars
+// RESULT: [audi, bmw, porshe]
+cars.getAt(0)
+// RESULT: audi
+cars.getAt(1)
+// RESULT: bmw
+cars.getAt(-1)
+// RESULT: porshe
+cars.size()
+// RESULT: 3
+cars[0]
+// RESULT: audi
+cars[-1]
+// RESULT: porshe
+cars
+// RESULT: [audi, bmw, porshe]
+cars[0] = 'Audi'
+// RESULT: Audi
+cars
+// RESULT: [Audi, bmw, porshe]
+cars.putAt(0, 'audi')
+// RESULT: null
+cars
+// RESULT: [audi, bmw, porshe]
+cars
+// RESULT: [audi, bmw, porshe]
+cars[0..1]
+// RESULT: [audi, bmw]
+cars[-2..cars.size()-1]
+// RESULT: [bmw, porshe]
+def pointers = [2, 5, 3, 10, 9, 3, 2, 4, 10]
+// RESULT: [2, 5, 3, 10, 9, 3, 2, 4, 10]
+pointers.unique()
+// RESULT: [2, 5, 3, 10, 9, 4]
+pointers
+// RESULT: [2, 5, 3, 10, 9, 4]
+pointers
+// RESULT: [2, 5, 3, 10, 9, 4]
+pointers.reverse()
+// RESULT: [4, 9, 10, 3, 5, 2]
+pointers.sort()
+// RESULT: [2, 3, 4, 5, 9, 10]
+pointers
+// RESULT: [2, 3, 4, 5, 9, 10]
+def pointers = [2, 5, 3, 10, 9, 3, 2, 4, 10]
+// RESULT: [2, 5, 3, 10, 9, 3, 2, 4, 10]
+pointers.count(2)
+// RESULT: 2
+pointers.count(10)
+// RESULT: 2
+pointers.count(0)
+// RESULT: 0
+def marks = [
+ [5, 6, 3, 2],
+ [6, 7, 10, 1]
+]
+// RESULT: [[5, 6, 3, 2], [6, 7, 10, 1]]
+marks.flatten()
+// RESULT: [5, 6, 3, 2, 6, 7, 10, 1]
+marks.max()
+// ERROR: java.lang.IllegalArgumentException: Cannot compare java.util.ArrayList with value '[6, 7, 10, 1]' and java.util.ArrayList with value '[5, 6, 3, 2]'
+//    groovysh_evaluate.run(groovysh_evaluate:3)
+//    groovysh_evaluate$run.call(Unknown Source)
+//    groovysh_evaluate$run.call(Unknown Source)
+//    java_lang_Runnable$run.call(Unknown Source)
+marks
+// RESULT: [[5, 6, 3, 2], [6, 7, 10, 1]]
+def f = marks.flatten()
+// RESULT: [5, 6, 3, 2, 6, 7, 10, 1]
+f
+// RESULT: [5, 6, 3, 2, 6, 7, 10, 1]
+f.max()
+// RESULT: 10
+f.min()
+// RESULT: 1
+f
+// RESULT: [5, 6, 3, 2, 6, 7, 10, 1]
+f.find(10)
+// ERROR: groovy.lang.MissingMethodException: No signature of method: java.util.ArrayList.find() is applicable for argument types: (Integer) values: [10]
+Possible solutions: find(), find(), find(groovy.lang.Closure), find(groovy.lang.Closure), min(), init()
+//    groovysh_evaluate.run(groovysh_evaluate:3)
+//    groovysh_evaluate$run.call(Unknown Source)
+//    groovysh_evaluate$run.call(Unknown Source)
+//    java_lang_Runnable$run.call(Unknown Source)
+10 in f1
+10 in f
+// RESULT: true
+11 in f1
+11 in f
+// RESULT: false
+1 in f
+// RESULT: true
+:record stop
+// CLOSED: Sun Mar 24 17:57:05 IST 2019
